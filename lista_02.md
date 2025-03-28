@@ -43,12 +43,6 @@ Qual das seguintes alternativas melhor descreve o que o código faz?
 
 A) O código avalia a expressão booleana, imprime `true`, calcula o produto dos números na lista e imprime o resultado no console.
 
-B) O código avalia a expressão booleana, imprime `false`, calcula o produto dos números na lista e imprime o resultado no console.
-
-C) O código avalia a expressão booleana, imprime `true` e, em seguida, verifica se o número 6 está na lista.
-
-D) O código avalia a expressão booleana, imprime `false` e ordena os valores em ordem crescente.
-
 
 ______
 
@@ -105,11 +99,6 @@ Se ambas as funções forem executadas com os valores fornecidos, qual será a s
 
 A) Ambas as funções exibirão: 'Seu crédito foi aprovado. Saldo disponível: 400.'
 
-B) analisarCredito1() exibirá: 'Seu crédito foi negado. Saldo disponível: -600.', enquanto analisarCredito2() exibirá: 'Seu crédito foi negado. Saldo disponível: -200.'
-
-C) analisarCredito1() exibirá: 'Seu crédito foi negado. Saldo disponível: -200.', enquanto analisarCredito2() exibirá: 'Seu crédito foi aprovado. Saldo disponível: 100.'
-
-D) Ambas as funções exibirão: 'Seu crédito foi aprovado Saldo disponível: 500.'
 ______
 
 **3)** Considere o seguinte trecho de código em JavaScript:
@@ -127,13 +116,8 @@ if (idade >= 18 && idade < 60) {
 ```
 Qual das seguintes alternativas melhor descreve o comportamento do código?
 
-A) O código verifica se a idade indica um adulto ou um idoso e exibe a mensagem correspondente.
-
 B) O código verifica se a idade pertence à faixa adulta. Se for, exibe "Você é um adulto!". Caso contrário, verifica se é menor de idade e exibe "Você é menor de idade!". Se nenhuma das condições anteriores for verdadeira, exibe "Você está na melhor idade!".
 
-C) O código verifica se a idade está entre 18 e 60 anos e, se for, imprime "Você é um adulto!". Se não estiver nesse intervalo, imprime "Você está na melhor idade!".
-
-D) O código verifica se a idade é menor de 18, entre 18 e 60 ou acima de 60, imprimindo uma mensagem específica para cada caso.
 ______
 
 **4)** Qual será o resultado impresso no console após a execução do seguinte código?
@@ -161,37 +145,6 @@ for (var i = 0; i < consumoDispositivos.length; i++) {
 
 Escolha a opção que responde corretamente:
 
-A)
-Dispositivo 1 ligado. Energia restante: 900
-
-Dispositivo 2 ligado com bateria extra. Energia restante: 700
-
-Dispositivo 3 ligado. Energia restante: 200
-
-Dispositivo 4 ligado com bateria extra. Energia restante: 0
-
-Dispositivo 5 ligado. Energia restante: -200
-
-B)
-Dispositivo 1 ligado. Energia restante: 900
-
-Dispositivo 2 ligado com bateria extra. Energia restante: 700
-
-Dispositivo 3 ligado. Energia restante: 200
-
-Dispositivo 4 não pode ser ligado. Energia insuficiente.
-
-Dispositivo 5 não pode ser ligado. Energia insuficiente.
-
-C)
-Dispositivo 1 ligado. Energia restante: 900
-
-Dispositivo 2 ligado com bateria extra. Energia restante: 700
-
-Dispositivo 3 ligado. Energia restante: 400
-
-Dispositivo 4 não pode ser ligado. Energia insuficiente.
-
 D)
 Dispositivo 1 ligado. Energia restante: 900
 
@@ -209,13 +162,8 @@ ______
 
 Escolha a opção que melhor descreve seu propósito:
 
-A) O método update() é responsável por carregar os assets do jogo antes da cena ser exibida.
-
 B) O método update() é chamado continuamente a cada quadro (frame) do jogo, sendo usado para atualizar a lógica, movimentação e interações dos objetos na cena.
 
-C) O método update() renderiza todos os sprites na tela e garante que a física do jogo seja processada corretamente.
-
-D) O método update() é chamado apenas uma vez após a criação da cena, sendo utilizado para configurar variáveis iniciais do jogo.
 ______
 
 **6)** Qual é o principal objetivo do módulo Matter.js Physics em Phaser.js?
@@ -223,12 +171,6 @@ ______
 Escolha a opção que responde corretamente:
 
 A) Simular física avançada, incluindo corpos rígidos, colisões complexas e interação entre objetos com gravidade e forças.
-
-B) Gerenciar eventos de entrada do usuário, como cliques e toques na tela, permitindo movimentação de personagens.
-
-C) Renderizar gráficos otimizados para jogos 2D e garantir uma taxa de quadros estável.
-
-D) Criar animações automáticas para sprites e objetos interativos sem necessidade de programação de movimentação.
 
 ______
 
