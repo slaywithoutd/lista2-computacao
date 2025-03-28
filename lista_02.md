@@ -186,7 +186,23 @@ Pedidos entre R$50,00 e R$199,99 (inclusive) → "Frete com custo adicional!"
 
 Pedidos de R$200,00 ou mais → "Frete grátis!"
 ```
-Implemente um pseudocódigo que receba o valor total da compra e exiba a classificação correta do frete para o cliente.
+Implemente um pseudocódigo que receba o valor total da compra e exiba a classificação correta do frete para o cliente:
+
+```
+INICIO
+    escrever "Digite o valor total da compra:"
+    ler valor_compra
+
+    se valor_compra < 50.00 entao
+        escrever "Frete não disponível."
+    senao se valor_compra >= 50.00 e valor_compra <= 199.99 entao
+        escrever "Frete com custo adicional."
+    senao
+        escrever "Frete grátis!"
+    fim se
+FIM
+```
+
 ______
 
 **8)** Considere a implementação da classe base Veiculo em um sistema de modelagem de veículos. Sua tarefa é implementar, utilizando pseudocódigo, as classes derivadas Carro e Moto, que herdam da classe Veiculo, adicionando atributos específicos e métodos para calcular o consumo de combustível de um carro e de uma moto, respectivamente.
@@ -203,7 +219,57 @@ Define os valores dos atributos modelo e ano com os valores passados como parâm
 Método CalcularConsumo():
 ```
 Implementação genérica para cálculo de consumo, a ser sobrescrita pelas subclasses.
-Agora, implemente as classes Carro e Moto, garantindo que ambas herdem de Veiculo e possuam métodos específicos para calcular o consumo de combustível com base na quilometragem e eficiência do veículo.
+Agora, implemente as classes Carro e Moto, garantindo que ambas herdem de Veiculo e possuam métodos específicos para calcular o consumo de combustível com base na quilometragem e eficiência do veículo:
+````
+classe Veiculo
+    atributos:
+        modelo
+        ano
+
+    método Construtor(modelo, ano)
+        modelo ← modelo
+        ano ← ano
+
+    método CalcularConsumo()
+        escrever "Método deve ser sobrescrito pelas subclasses!"
+
+FIM CLASSE
+
+classe Carro herda Veiculo
+    atributos:
+        consumo_por_km  // Quilômetros por litro
+
+    método Construtor(modelo, ano, consumo_por_km)
+        chamar Super(modelo, ano)
+        consumo_por_km ← consumo_por_km
+
+    MÉTODO CalcularConsumo(distancia)
+        se consumo_por_km > 0 entao
+            retorno distancia / consumo_por_km
+        senao
+            escrever "Consumo inválido!"
+            retornar -1
+        fim se
+FIM CLASSE
+
+classe Moto herda Veiculo
+    atributos:
+        consumo_por_km  // Quilômetros por litro
+
+    método Construtor(modelo, ano, consumo_por_km)
+        chamar Super(modelo, ano)
+        consumo_por_km ← consumo_por_km
+
+    método CalcularConsumo(distancia)
+        se consumo_por_km > 0 entao
+            retornar distancia / consumo_por_km
+        senao
+            escrever "Consumo inválido!"
+            retornar -1
+        fim se
+FIM CLASSE
+
+````
 ______
 
 **9)** Você é um cientista da NASA e está ajudando no desenvolvimento de um sistema de pouso para sondas espaciais em Marte. Seu objetivo é calcular o tempo necessário para que a sonda reduza sua velocidade até um nível seguro para pouso, considerando uma velocidade inicial de entrada na atmosfera marciana e uma taxa de desaceleração constante causada pelo atrito atmosférico e retrofoguetes.
@@ -216,7 +282,45 @@ Considere a fórumla de atualização velocidade:
 ```
     velocidade = velocidadeInicial - desaceleracao * tempo
 ```
-Seu programa deve determinar quanto tempo será necessário para que a sonda atinja uma velocidade segura de pouso, sem ultrapassar os limites estabelecidos.
+Seu programa deve determinar quanto tempo será necessário para que a sonda atinja uma velocidade segura de pouso, sem ultrapassar os limites estabelecidos:
+
+````
+INICIO
+    escrever "Digite a velocidade inicial da sonda (m/s):"
+    ler velocidadeInicial
+
+    escrever "Digite a taxa de desaceleração (m/s²):"
+    ler desaceleracao
+
+    escrever "Digite a velocidade segura para pouso (m/s):"
+    ler velocidadeSegura
+
+    escrever "Digite o tempo máximo permitido para descida (s):"
+    ler tempoMaximo
+
+    // Verificar se os parâmetros são válidos
+    se desaceleracao <= 0 entao
+        escrever "Erro: A desaceleração deve ser maior que zero!"
+        sair
+
+    se velocidadeSegura >= velocidadeInicial entao
+        escrever "Erro: A velocidade segura deve ser menor que a velocidade inicial!"
+        sair
+
+    // Calcular o tempo necessário para atingir a velocidade segura
+    tempoNecessario ← (velocidadeInicial - velocidadeSegura) / desaceleracao
+
+    // Verificar se o tempo necessário respeita o limite máximo
+    se tempoNecessario > tempoMaximo entao
+        escrever "A sonda não conseguirá desacelerar a tempo! Ajuste os parâmetros."
+    senao
+        escrever "A sonda atingirá uma velocidade segura em ", tempoNecessario, " segundos."
+    fim se
+FIM
+
+````
+
+
 ______
 
 **10)** Em um sistema de análise financeira, as operações de investimento de uma empresa podem ser representadas por matrizes, onde cada linha representa um tipo de investimento e cada coluna representa um período de tempo.
